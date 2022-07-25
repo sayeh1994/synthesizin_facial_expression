@@ -15,6 +15,7 @@ python main.py --mode='train' --dataset='RaFD' --c_dim=7 --image_size=256 \
                  --model_save_dir='stargan_affectnet/models' --result_dir='stargan_affectnet/results'
 ```
 
+The pretrained model can be downloaded from [MyDrive](https://drive.google.com/drive/folders/1-3T9AKzD1CSK6UYzcg5xQXUR_Dpyj5zu?usp=sharing).
 To test the trained model you either save all the results in one image with the following code by putting the test image in its own class of emotion in `rafd_image_dir='data/test'`:
 
 ```bash
