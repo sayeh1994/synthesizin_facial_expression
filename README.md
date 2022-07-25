@@ -6,7 +6,14 @@ In this project, we were trying to synthesize different facial expressions (ange
 
 The original code is from the [StarGAN - Official PyTorch Implementation](https://github.com/yunjey/stargan.git) but the model trained with [Affectnet-HQ dataset](https://www.kaggle.com/datasets/tom99763/affectnethq) instead of [RaFD dataset](http://www.socsci.ru.nl:8180/RaFD2/RaFD).
 
-For training you can run the following command:
+The code is written with tensorflow version 1. For training you can run the following command:
+
+If you are running your code in google colab, you have to put these lines in a block before training:
+```bash
+%tensorflow_version 1.x
+import tensorflow as tf
+print(tf.__version__)
+```
 
 ```bash
 python main.py --mode='train' --dataset='RaFD' --c_dim=7 --image_size=256 \
