@@ -1,3 +1,5 @@
+## Our Paper [arXiv](https://arxiv.org/abs/2303.15223)
+
 # Synthesizing facial expression
 
 In this project, we were trying to synthesize different facial expressions (anger, disgust, fear, happy, sad, surprised) on generated identities from [StyleGAN Model](https://github.com/NVlabs/stylegan2.git).
@@ -41,3 +43,20 @@ python main.py --mode='test_sep' --dataset='RaFD' --c_dim=7 --image_size=256 \
 ```
 
 
+
+# Citation
+Please cite our paper from the following bibtex:
+```bash
+@conference{visapp23,
+author={Sayeh {Gholipour Picha}. and Dawood {Al Chanti}. and Alice Caplier.},
+title={How far Generated Data Can Impact Neural Networks Performance?},
+booktitle={Proceedings of the 18th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications - Volume 5: VISAPP,},
+year={2023},
+pages={472-479},
+publisher={SciTePress},
+organization={INSTICC},
+doi={10.5220/0011629000003417},
+isbn={978-989-758-634-7},
+issn={2184-4321},
+}
+```
