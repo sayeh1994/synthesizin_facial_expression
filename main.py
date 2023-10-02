@@ -90,7 +90,7 @@ if __name__ == '__main__':
                         default=['Black_Hair', 'Blond_Hair', 'Brown_Hair', 'Male', 'Young'])
 
     # Test configuration.
-    parser.add_argument('--test_iters', type=int, default=100000, help='test model from this step')
+    parser.add_argument('--test_iters', type=int, default=200000, help='test model from this step')
 
     # Miscellaneous.
     parser.add_argument('--num_workers', type=int, default=1)
