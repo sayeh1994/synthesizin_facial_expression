@@ -7,11 +7,9 @@ from torch.backends import cudnn
 
 def str2bool(v):
     return v.lower() in ('true')
-
 def main(config):
     # For fast training.
     cudnn.benchmark = True
-
     # Create directories if not exist.
     if not os.path.exists(config.log_dir):
         os.makedirs(config.log_dir)
@@ -21,7 +19,6 @@ def main(config):
         os.makedirs(config.sample_dir)
     if not os.path.exists(config.result_dir):
         os.makedirs(config.result_dir)
-
     # Data loader.
     celeba_loader = None
     rafd_loader = None
@@ -38,7 +35,6 @@ def main(config):
 
     # Solver for training and testing StarGAN.
     solver = Solver(celeba_loader, rafd_loader, config)
-
     if config.mode == 'train':
         if config.dataset in ['CelebA', 'RaFD']:
             solver.train()
@@ -54,7 +50,6 @@ def main(config):
             rafd_loader = get_loader(config.rafd_image_dir, None, None, config.rafd_crop_size, config.image_size, 1,'RaFD', config.mode, config.num_workers)
             solver = Solver(celeba_loader, rafd_loader, config)
             solver.test_sep()
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
